@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-src https://www.youtube-nocookie.com; connect-src 'self'; img-src 'self' data:; base-uri 'self'; form-action 'self';" />
+  <title>PhonksBrazililian.noAds</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="hero-top">
+        <div>
+          <p class="version-badge">noAds 1.1</p>
+          <h1>PhonksBrazililian.noAds</h1>
+          <p>Ouça seus Phonks/Funk favoritos sem Anúncios!</p>
+        </div>
+        <div class="project-stats" aria-label="Resumo do catálogo">
+          <div class="stat-card">
+            <span class="stat-label">Artistas</span>
+            <strong id="artistCount">0</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Músicas</span>
+            <strong id="songCount">0</strong>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="search-box">
+      <div class="input-wrap">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Pesquisar música ou artista..."
+          autocomplete="off"
+        />
+      </div>
+      <p id="apiStatus" class="api-status">Carregando as músicas...</p>
+    </section>
+
+    <section class="content">
+      <aside class="results-panel">
+        <h2>Resultados</h2>
+        <ul id="resultsList" class="results-list"></ul>
+        <p id="emptyState" class="empty-state">Digite para pesquisar.</p>
+      </aside>
+
+      <section class="player-panel">
+        <h2>Player</h2>
+        <div class="now-playing" id="nowPlaying">Nenhuma música selecionada.</div>
+
+        <div class="player-frame">
+          <iframe
+            id="musicPlayer"
+            title="Player de Música"
+            src=""
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
