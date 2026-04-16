@@ -1,5 +1,5 @@
 const YT_NOCOOKIE_BASE = "https://www.youtube-nocookie.com/embed/";
-const API_ENDPOINT = "music.php";
+const API_ENDPOINT = "/music.php";
 
 const state = {
   songs: [],

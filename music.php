@@ -69,7 +69,7 @@ function isValidYouTubeId(string $videoId): bool
     return (bool) preg_match('/^[A-Za-z0-9_-]{11}$/', $videoId);
 }
 
-$databasePath = dirname(__DIR__) . 'music-db.json';
+$databasePath = dirname(__DIR__) . '/database.json';
 
 if (!is_file($databasePath)) {
     fail('Banco de dados musical não encontrado.', 500);
